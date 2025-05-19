@@ -1,0 +1,941 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --orange: rgb(253, 95, 37);
+    --darkblue: rgb(9, 8, 78);
+    --yell-ow: #FBB048;
+    --white: #fff;
+    --deepBlue: #10101A;
+}
+
+.main {
+    min-height: 100vh;
+    transition: all .25s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+
+.header {
+    background-color: #10101A;
+    padding: .6rem 1rem;
+    padding-right: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    height: 3.7rem;
+}
+
+.header h1 {
+    color: white;
+    font-family: fantasy, cursive;
+    position: relative;
+    width: 15rem;
+    letter-spacing: 4px;
+    text-shadow: 4px 1px #dfd9d9;
+    font-size: 2.2rem;
+    transition: .25s ease;
+    padding: .3rem;
+    cursor: pointer;
+}
+
+.header h1:hover {
+    transform: scale(1.034);
+    box-shadow: 0 0 10px 2px red;
+}
+
+.header h1 span {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2.6rem;
+}
+
+.header .Links {
+    position: fixed;
+    inset: 0;
+    left: auto;
+    bottom: auto;
+    top: -20rem;
+    background-color: rgba(12, 10, 10, 0.61);
+    width: 100%;
+    text-align: center;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: .25s ease-in-out;
+}
+
+.header .Links.show {
+    top: 0;
+}
+
+.Links li {
+    list-style-type: none;
+    color: white;
+    transition: all .25s ease-in-out;
+    flex-shrink: 0;
+    transition: .25s ease-in-out;
+}
+
+.Links li:hover {
+    transform: scale(1.03);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-bottom: 2px solid rgb(242, 60, 60);
+}
+
+.Links .close-tag {
+    font-size: 2.3rem;
+    font-weight: 500;
+    color: white;
+
+}
+
+.Links li a {
+    text-decoration-line: none;
+    color: inherit;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-size: 1.3rem;
+    font-family: 'Times New Roman', Times, serif;
+    transition: all .1s ease-in-out;
+}
+
+.navLink.active {
+    color: var(--orange);
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-shadow: 2px 2px rgba(255, 68, 0, 0.51);
+    font-size: 1.4rem;
+}
+
+section {
+    min-height: 100vh;
+}
+
+.first-div {
+    background-color: #76818798;
+    background-image: url(./assets/nubelson-fernandes-jKL2PvKN8Q0-unsplash.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 3rem;
+    transition: all .2s ease-in-out;
+    flex-shrink: 0;
+    padding-top: 5rem;
+    position: relative;
+}
+
+.first-div .new {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: .4rem;
+}
+
+.first-div .myName {
+    background-color: rgba(0, 0, 0, 0.185);
+    display: inline-block;
+    padding: .3rem;
+    border-bottom: 2px solid var(--orange);
+    border-right: 2px solid var(--orange);
+    box-shadow: 2px 2px 10px 0 rgb(246, 122, 122);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.first-div h2 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: var(--orange);
+    line-height: 2rem;
+}
+
+.first-div .greet {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--orange);
+}
+
+.first-div span {
+    display: block;
+    color: var(--white);
+    letter-spacing: 1px;
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 2px 0 rgba(34, 34, 41, 0.829);
+}
+
+button {
+    width: 100%;
+    height: 2.5rem;
+    outline: none;
+    border: none;
+    border-radius: .4rem;
+    margin-bottom: 1rem;
+    font-weight: 650;
+    box-shadow: 0 5px 10px 1px rgba(0, 0, 0, .2);
+}
+
+a button:hover {
+    box-shadow: 0 5px 10px 2px rgba(0, 0, 0, .2);
+}
+
+button a {
+    text-decoration-line: none;
+    color: inherit;
+    font-size: .7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.first-div .about-me {
+    background-color: var(--orange);
+    color: white;
+}
+
+.first-div .contact-me {
+    background-color: #FBB048;
+    color: var(--darkblue);
+    font-weight: 700;
+}
+
+#about-me {
+    background-color: aliceblue;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    transition: all .2s ease-in-out;
+    flex-shrink: 0;
+    padding-top: 4rem;
+}
+
+#about-me h2,
+#my-works h2 {
+    margin-bottom: 1rem;
+    color: var(--deepBlue);
+    letter-spacing: 1px;
+    font-size: 2rem
+}
+
+.inside-about-me>.about-me-par {
+    text-align: justify;
+    color: var(--darkblue);
+}
+
+.row .about-me-par {
+    font-family: inherit;
+    font-size: .9rem;
+    line-height: 1.5rem;
+    color: var(--darkblue);
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgb(161, 157, 157);
+    padding-bottom: .4rem;
+}
+
+#about-me h3 {
+    color: var(--deepBlue);
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.row .meStuffs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 1rem;
+    row-gap: 1rem;
+}
+
+.meStuffs p {
+    display: flex;
+    gap: .6rem;
+    display: inline-block;
+    margin: .5rem 0;
+    margin-right: 1rem;
+    color: var(--darkblue);
+}
+
+.meStuffs p span:nth-child(1) {
+    font-weight: 600;
+    margin-right: .4rem;
+}
+
+.meStuffs p span:nth-child(2) {
+    font-size: .9rem;
+}
+
+.row .about-me-par {
+    display: flex;
+    align-items: flex-start;
+    color: var(--darkblue);
+}
+
+.row .institution {
+    flex: 0 0 70%;
+}
+
+.row .qualification {
+    flex: 0 0 30%;
+    font-weight: 650;
+}
+
+#about-me ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+#about-me li {
+    list-style-type: none;
+    height: 1rem;
+    padding: .8rem .3rem;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    border-bottom: 1px solid rgb(161, 157, 157);
+}
+
+.skill-cv .skill {
+    color: var(--darkblue);
+    display: flex;
+    flex-direction: column;
+}
+
+.skill li .lang {
+    font-size: .9rem;
+    font-weight: 600;
+    margin-right: auto;
+    width: 20%;
+    display: inline-block;
+    flex: 0 0 20%;
+}
+
+.skill .progress {
+    height: .4rem;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    border-radius: .5rem;
+    margin-left: 1rem;
+}
+
+.skill .progress-bar {
+    height: 100%;
+    border-radius: .5rem;
+    background-color: var(--orange);
+}
+.skill .progress-bar:hover{
+    background-color: var(--yell-ow);
+}
+
+.skill .percent {
+    position: absolute;
+    right: 0;
+    top: -.6rem;
+    font-size: .6rem;
+    color: var(--darkblue);
+    font-weight: 500;
+}
+
+#about-me li a {
+    text-decoration-line: none;
+    color: var(--darkblue);
+    height: inherit;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+#about-me li a:hover {
+    transform: scale(1.3);
+    color: var(--deepBlue);
+    font-weight: 700;
+}
+
+.myCv button {
+    background-color: var(--deepBlue);
+    color: white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .25s ease-in-out;
+}
+
+.myCv {
+    font-size: 1rem;
+    text-decoration-line: none;
+}
+
+#my-works {
+    min-height: 100vh;
+    flex-shrink: 0;
+    background: linear-gradient(to bottom, #F0F8FF, #010206);
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    padding-top: 4rem;
+}
+
+#my-works h2 {
+    color: var(--deepBlue);
+
+}
+
+#my-works p {
+    color: var(--darkblue);
+    font-size: 1rem;
+    line-height: 1.4rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.myWorks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 1fr 1fr 1fr 1fr;
+    gap: .2rem;
+    border-radius: .4rem;
+    overflow: hidden;
+}
+
+.work-div {
+    display: inline-flex;
+    position: relative;
+    border-radius: .5rem;
+}
+
+
+.work-div img {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border-radius: .5rem;
+}
+
+.work-div img:hover {
+    z-index: 0;
+}
+
+.work-div .layout {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.534);
+    border-radius: .5rem;
+}
+
+.work-div .layout:hover {
+    z-index: 1;
+}
+
+.work-div a {
+    width: 6rem;
+    height: 2.5rem;
+    background-color: white;
+    border-radius: .5rem;
+    text-decoration-line: none;
+    color: var(--orange);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.github {
+    margin-top: 1.4rem;
+    color: var(--white);
+    background-color: var(--orange);
+    transition: .25s ease-in-out;
+}
+
+.myCv button:hover {
+    background-color: var(--white);
+    color: var(--deepBlue);
+    transform: scale(1.05);
+}
+
+.github:hover {
+    background-color: var(--white);
+    color: var(--deepBlue);
+    transform: scale(1.05);
+}
+
+#contact-me {
+    background: linear-gradient(to bottom, #010206, var(--deepBlue));
+    flex-shrink: 0;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    padding-top: 4rem;
+    text-align: center;
+}
+
+#contact-me h2 {
+    color: var(--white);
+    margin-bottom: 2rem;
+    text-align: left;
+    font-size: 1.8rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+blockquote {
+    background-color: white;
+    color: var(--orange);
+    padding: 1rem;
+    border-radius: .4rem;
+    box-shadow: 4px 5px 12px 9px rgba(190, 183, 183, 0.801);
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 1.5rem 2rem;
+    line-height: 1.5rem;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#contact-me .contact-details {
+    text-align: left;
+    margin-bottom: 4rem;
+}
+
+#contact-me p {
+    color: var(--white);
+}
+
+.contact-details h3 {
+    color: var(--yell-ow);
+    margin: 1.2rem 0;
+}
+
+.contact-details .media-handles {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-weight: 600;
+}
+.media-handles .medium{
+    color: var(--orange);
+    text-transform: capitalize;
+}
+.media-handles img {
+    max-width: 1rem;
+    width: 100%;
+    height: auto;
+    margin-right: .4rem;
+    vertical-align: middle;
+}
+.media-handles .whatsapp, .media-handles .gitthub, .media-handles .linkd{
+    max-width: 1.5rem;
+}
+.media-handles p {
+    display: flex;
+    flex-direction: column;
+}
+
+.copywrite {
+    font-size: .7rem;
+}
+
+@media (min-width: 700px) {
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .header {
+        width: 100%;
+    }
+
+
+    .header .menu {
+        width: 100%;
+        max-width: 2rem;
+    }
+
+    .header .Links {
+        position: relative;
+        inset: 0;
+        background-color: #10101A;
+        width: 100%;
+        text-align: left;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 3.5rem;
+        transition: .25s ease-in-out;
+    }
+
+    .Links .close-tag {
+        display: none;
+    }
+
+    .header .menu {
+        display: none;
+    }
+
+    .first-div {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: flex-end;
+        padding-bottom: 5rem;
+    }
+
+    .first-div h2 {
+        width: 100%;
+        font-size: 2.5rem;
+        color: white;
+        line-height: 2.5rem;
+    }
+
+    .first-div h2 span {
+        /* color: var(--orange); */
+        font-size: 3rem;
+    }
+
+    .first-div .myName {
+        font-size: 2.2rem;
+    }
+
+    .first-div .buttons {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: flex-start;
+        align-items: center;
+        /* align-items: flex-end; */
+    }
+
+    .first-div a {
+        width: 80%;
+        height: 3.4rem;
+        transition: all .25s ease-in-out;
+    }
+
+    .first-div a:hover {
+        width: 100%;
+        height: 3.8rem;
+        box-shadow: 0 0 10px 2px rgb(83, 56, 46);
+    }
+
+    .first-div .buttons button {
+        height: 100%;
+        width: 100%;
+    }
+
+    .buttons button {
+        width: 80%;
+    }
+
+    .first-div button:hover {
+        box-shadow: 0 5px 10px 2px rgba(112, 65, 65, 0.2);
+        background-color: white;
+        font-weight: 750;
+    }
+
+    .first-div .about-me:hover {
+        color: var(--orange);
+    }
+
+    .first-div .contact-me:hover {
+        color: var(--yell-ow);
+    }
+
+
+    #about-me {
+        padding-bottom: 2rem;
+    }
+
+    #about-me h3 {
+        font-size: 1.5rem;
+    }
+
+    .inside-about-me>.about-me-par {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    /* .inside-about-me .meStuffs {
+        margin-bottom: 2rem;
+    } */
+
+    .meStuffs p span:nth-child(1) {
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
+
+    .meStuffs p span:nth-child(2) {
+        font-size: 1rem;
+    }
+
+    .row .institution {
+        font-size: 1rem;
+    }
+
+    .row .qualification {
+        font-size: 1.2rem;
+    }
+
+    .skill li .lang {
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+
+    .skill .progress {
+        height: .5rem;
+        border-radius: .6rem;
+        margin-left: 1rem;
+    }
+
+    .skill .progress-bar {
+        border-radius: .6rem;
+    }
+
+    .skill .percent {
+        top: -.7rem;
+        font-size: .7rem;
+        font-weight: 600;
+    }
+
+    #about-me h3 {
+        margin-bottom: 2rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    #about-me ul {
+        flex-direction: column;
+        gap: 3rem;
+        margin-bottom: 4rem;
+        width: 100%;
+    }
+
+    #about-me li a {
+        font-size: 1.4rem;
+    }
+
+    .cv-div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .myCv {
+        width: 60%;
+        display: flex;
+        height: 3rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .myCv button {
+        width: 100%;
+        height: 100%;
+        font-size: 1.2rem;
+    }
+
+    #my-works p {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+    }
+
+    .myWorks {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 8rem);
+        margin: 1rem 2rem;
+    }
+
+    .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration-line: none;
+    }
+
+    .github {
+        width: 80%;
+        height: 3rem;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    #contact-me h2 {
+        font-size: 2rem;
+        text-align: left;
+    }
+
+    blockquote {
+        float: right;
+        width: 20rem;
+        height: 12rem;
+        margin-right: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .copywrite {
+        display: flex;
+        gap: 1rem;
+        font-size: .8rem;
+    }
+
+
+}
+
+@media (min-width: 900px) {
+    .first-div {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .first-div h2 {
+        width: 50%;
+        line-height: 3rem;
+    }
+
+    .first-div .buttons {
+        align-items: flex-start;
+    }
+
+    .first-div a {
+        width: 50%;
+    }
+
+    .first-div a:hover {
+        width: 60%;
+        height: 3.8rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+
+    #about-me {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #about-me section {
+        display: flex;
+        gap: 1rem;
+    }
+
+    #about-me .about-me-par {
+        line-height: 2rem;
+    }
+    #about-me ul{
+        display: grid;
+        grid-template-columns: 30rem 30rem;
+        grid-template-rows: 1fr 1fr;
+        padding-left: 2rem;
+        row-gap: 2.5rem;
+        margin-bottom: 4rem;
+    }
+    .list-box{
+        width: .6rem;
+        height: .6rem;
+        border-radius: 50%;
+        background-color: var(--orange);
+        position: absolute;
+        left: -1.5rem;
+        top: 0;
+    }
+
+
+    .myWorks {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 13rem);
+        margin: 1rem 2rem;
+    }
+
+    .github {
+        width: 60%;
+        height: 3.5rem;
+        font-size: 1.2rem;
+    }
+
+    #contact-me {
+        min-height: 100vh;
+        position: relative;
+    }
+    .quote{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    blockquote {
+        float: none;
+        width: 25rem;
+        height: 15rem;
+        margin-right: 2rem;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        padding: 2rem 3rem;
+        text-align: center;
+        flex: 0 0 50%;
+    }
+    .quote p{
+        flex: 0 0 50%;
+        font-size: 2rem;
+    }
+
+    .contact-details h3 {
+        text-align: center;
+        font-size: 1.8rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .contact-details .media-handles {
+        font-size: 1.2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 2.5rem;
+    }
+
+    .media-handles p {
+        align-items: center;
+        justify-content: flex-start;
+        gap: .3rem;
+    }
+
+
+    .copywrite {
+        width: 100%;
+        justify-content: center;
+        font-size: 1rem;
+        margin-top: 2rem;
+        position: absolute;
+        bottom: 3rem;
+    }
+}
